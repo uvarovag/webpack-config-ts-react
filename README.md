@@ -31,6 +31,8 @@ export default (env: TEnv) =>
         devServer: {
             proxy: [
                 {
+                    secure: false,
+                    changeOrigin: true,
                     pathRewrite: {
                         '^/pokeapi': '',
                     },
