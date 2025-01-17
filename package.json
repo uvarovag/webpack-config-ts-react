@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/webpack-config-ts-react",
-    "version": "1.0.1",
+    "version": "1.0.0",
     "main": "dist/webpack.config.js",
     "module": "dist.es2015/webpack.config.js",
     "types": "dist/webpack.config.d.ts",
