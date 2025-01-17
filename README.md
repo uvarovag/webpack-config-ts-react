@@ -12,7 +12,7 @@ npm install --save-dev @uvarovag/webpack-config-ts-react webpack webpack-cli
 
 ## Usage
 
-### Step 1: Create a webpack.config.ts file
+### Step 1: Create a `webpack.config.ts` file
 
 ```ts
 import toCamelCase from '@uvarovag/to-camel-case'
@@ -44,7 +44,7 @@ export default (env: TEnv) =>
     })
 ```
 
-### Step 2: Add scripts to your package.json
+### Step 2: Add scripts to your `package.json`
 
 ```json
 "scripts": {
