@@ -31,8 +31,6 @@ export default (env: TEnv) =>
         devServer: {
             proxy: [
                 {
-                    secure: false,
-                    changeOrigin: true,
                     pathRewrite: {
                         '^/pokeapi': '',
                     },
@@ -44,7 +42,7 @@ export default (env: TEnv) =>
     })
 ```
 
-### Step 2: Add Scripts to Your package.json
+### Step 2: Add scripts to your package.json
 
 ```json
 "scripts": {
