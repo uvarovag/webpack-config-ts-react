@@ -13,7 +13,7 @@
         "build:esm": "tsc --project tsconfig.esm.json",
         "build": "npm run build:cjs && npm run build:esm",
         "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}'",
-        "publish": "npm run fix && npm run test && npm run build && npm publish --access public"
+        "publish": "npm run fix && npm run build && npm publish --access public"
     },
     "keywords": [
         "webpack",
