@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/webpack-config-ts-react",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "Shared Webpack configuration for React projects using TypeScript",
     "main": "dist/webpack.config.js",
     "module": "dist.es2015/webpack.config.js",
@@ -34,7 +34,6 @@
     },
     "dependencies": {
         "css-loader": "^7.1.2",
-        "file-loader": "^6.2.0",
         "fork-ts-checker-webpack-plugin": "^9.0.2",
         "html-webpack-plugin": "^5.6.3",
         "style-loader": "^4.0.0",

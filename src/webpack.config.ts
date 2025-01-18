@@ -81,9 +81,20 @@ export default ({
                     use: '@svgr/webpack',
                 },
                 {
-                    // Загрузка изображений и шрифтов через file-loader
-                    test: /\.(png|jpe?g|gif|woff|woff2)$/i,
-                    use: 'file-loader',
+                    // Использовать asset/resource для копирования файлов
+                    test: /\.(png|jpe?g|gif|svg)$/i,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'assets/images/[hash][ext][query]',
+                    },
+                },
+                {
+                    // Использовать asset/resource для копирования файлов
+                    test: /\.(woff|woff2|eot|ttf|otf)$/i,
+                    type: 'asset/resource',
+                    generator: {
+                        filename: 'assets/fonts/[hash][ext][query]',
+                    },
                 },
                 {
                     // Обработка CSS файлов
@@ -128,7 +139,7 @@ export default ({
             // Для SPA: перенаправление всех запросов на index.html
             historyApiFallback: true,
             // Путь к статическим файлам
-            static: path.resolve(process.cwd(), 'dist'),
+            static: [path.resolve(process.cwd(), 'dist'), path.resolve(process.cwd(), 'public')],
             // Открытие браузера при старте DevServer
             open: true,
         },
