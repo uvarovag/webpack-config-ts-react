@@ -1,6 +1,7 @@
 {
     "name": "@uvarovag/webpack-config-ts-react",
-    "version": "1.0.1",
+    "version": "1.0.2",
+    "description": "Shared Webpack configuration for React projects using TypeScript",
     "main": "dist/webpack.config.js",
     "module": "dist.es2015/webpack.config.js",
     "types": "dist/webpack.config.d.ts",
@@ -26,7 +27,6 @@
     ],
     "author": "@uvarovag",
     "license": "MIT",
-    "description": "Shared Webpack configuration for React projects using TypeScript",
     "homepage": "https://github.com/uvarovag/webpack-config-ts-react/blob/master/README.md",
     "repository": {
         "type": "git",
@@ -44,7 +44,7 @@
         "@types/node": "^22.10.7",
         "@types/webpack": "^5.28.5",
         "@types/webpack-dev-server": "^4.7.1",
-        "@uvarovag/prettier-config": "^1.0.5",
+        "@uvarovag/prettier-config": "^1.0.6",
         "prettier": "^3.4.2",
         "typescript": "^5.7.3",
         "webpack": "^5.97.1",
