@@ -21,9 +21,9 @@ import { merge } from 'webpack-merge'
 
 import packageJson from './package.json'
 
-import type { TEnv } from '@uvarovag/webpack-config-ts-react'
+import type { TConfiguration, TEnv } from '@uvarovag/webpack-config-ts-react'
 
-export default (env: TEnv) =>
+export default (env: TEnv): TConfiguration =>
     merge(baseConfig(env), {
         output: {
             uniqueName: toCamelCase(packageJson.name),

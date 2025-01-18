@@ -1,6 +1,7 @@
 import HtmlWebpackPlugin from 'html-webpack-plugin'
 import path from 'node:path'
 import { DefinePlugin, ProgressPlugin, HotModuleReplacementPlugin } from 'webpack'
+import ForkTsCheckerWebpackPlugin from 'fork-ts-checker-webpack-plugin'
 
 import type { Configuration as WebpackConfigurations } from 'webpack'
 import type { Configuration as WebpackDevServerConfigurations } from 'webpack-dev-server'
@@ -106,6 +107,18 @@ export default ({
             new ProgressPlugin(),
             // Поддержка Hot Module Replacement для обновления модулей без перезагрузки страницы
             new HotModuleReplacementPlugin(),
+            new ForkTsCheckerWebpackPlugin({
+                // Проверка типов асинхронно в режиме разработки
+                async: isDev,
+                typescript: {
+                    diagnosticOptions: {
+                        // Проверка семантики TypeScript
+                        semantic: true,
+                        // Проверка синтаксиса
+                        syntactic: true,
+                    },
+                },
+            }),
         ],
         // Настройки DevServer для разработки
         devServer: {
