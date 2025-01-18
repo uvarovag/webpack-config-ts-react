@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/webpack-config-ts-react",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "dist/webpack.config.js",
     "module": "dist.es2015/webpack.config.js",
     "types": "dist/webpack.config.d.ts",
@@ -12,7 +12,7 @@
         "build:cjs": "tsc --project tsconfig.cjs.json",
         "build:esm": "tsc --project tsconfig.esm.json",
         "build": "npm run build:cjs && npm run build:esm",
-        "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}'",
+        "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && npm pkg fix",
         "publish": "npm run fix && npm run build && npm publish --access public"
     },
     "keywords": [
@@ -33,14 +33,12 @@
         "url": "git+https://github.com/uvarovag/webpack-config-ts-react.git"
     },
     "dependencies": {
-        "@uvarovag/to-camel-case": "^1.0.13",
         "css-loader": "^7.1.2",
         "file-loader": "^6.2.0",
         "html-webpack-plugin": "^5.6.3",
         "style-loader": "^4.0.0",
         "ts-loader": "^9.5.2",
-        "webpack-dev-server": "^5.2.0",
-        "webpack-merge": "^6.0.1"
+        "webpack-dev-server": "^5.2.0"
     },
     "devDependencies": {
         "@types/node": "^22.10.7",

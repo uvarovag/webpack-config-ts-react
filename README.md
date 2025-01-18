@@ -7,7 +7,7 @@ Shared Webpack configuration for React projects using TypeScript.
 To use this configuration in your project, install the necessary dependencies:
 
 ```bash
-npm install --save-dev @uvarovag/webpack-config-ts-react webpack webpack-cli
+npm install --save-dev @uvarovag/webpack-config-ts-react webpack webpack-cli @uvarovag/to-camel-case webpack-merge
 ```
 
 ## Usage
