@@ -1,6 +1,6 @@
 {
     "name": "@uvarovag/webpack-config-ts-react",
-    "version": "1.2.0",
+    "version": "1.2.1",
     "description": "Shared Webpack configuration for React projects using TypeScript",
     "main": "dist/webpack.config.js",
     "module": "dist.es2015/webpack.config.js",

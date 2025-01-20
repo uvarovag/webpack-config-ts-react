@@ -19,14 +19,14 @@ import toCamelCase from '@uvarovag/to-camel-case'
 import baseConfig from '@uvarovag/webpack-config-ts-react'
 import { merge } from 'webpack-merge'
 
-import packageJson from './package.json'
+import { name } from './package.json'
 
 import type { TConfiguration, TEnv } from '@uvarovag/webpack-config-ts-react'
 
 export default (env: TEnv): TConfiguration =>
     merge(baseConfig(env), {
         output: {
-            uniqueName: toCamelCase(packageJson.name),
+            uniqueName: toCamelCase(name),
         },
         devServer: {
             proxy: [

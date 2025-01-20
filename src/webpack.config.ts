@@ -142,6 +142,10 @@ export default ({
             static: [path.resolve(process.cwd(), 'dist'), path.resolve(process.cwd(), 'public')],
             // Открытие браузера при старте DevServer
             open: true,
+            headers: {
+                // Доступ с любого источника
+                'Access-Control-Allow-Origin': '*',
+            },
         },
     }
 }
