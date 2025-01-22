@@ -111,23 +111,24 @@ export default ({
                 BASE_URL: JSON.stringify(BASE_URL),
             }),
             // Прогресс-бар во время сборки
-            new ProgressPlugin(),
+            isDev && new ProgressPlugin(),
             // Поддержка Hot Module Replacement для обновления модулей без перезагрузки страницы
-            new HotModuleReplacementPlugin(),
+            isDev && new HotModuleReplacementPlugin(),
             // Проверка типов TypeScript в режиме разработки
-            new ForkTsCheckerWebpackPlugin({
-                // Проверка типов асинхронно в режиме разработки
-                async: isDev,
-                typescript: {
-                    diagnosticOptions: {
-                        // Проверка семантики TypeScript
-                        semantic: true,
-                        // Проверка синтаксиса
-                        syntactic: true,
+            isDev &&
+                new ForkTsCheckerWebpackPlugin({
+                    // Проверка типов асинхронно в режиме разработки
+                    async: isDev,
+                    typescript: {
+                        diagnosticOptions: {
+                            // Проверка семантики TypeScript
+                            semantic: true,
+                            // Проверка синтаксиса
+                            syntactic: true,
+                        },
                     },
-                },
-            }),
-        ],
+                }),
+        ].filter(Boolean),
         // Настройки DevServer для разработки
         devServer: {
             // Порт разработки
