@@ -55,10 +55,6 @@ export default ({
             modules: [src, 'node_modules'],
             // Главные файлы для модуля
             mainFiles: ['index'],
-            // Псевдонимы для сокращения путей
-            alias: {
-                react: path.resolve('./node_modules/react'),
-            },
         },
         // Настройки загрузчиков для обработки различных типов файлов
         module: {
