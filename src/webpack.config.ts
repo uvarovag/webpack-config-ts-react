@@ -23,8 +23,9 @@ export default ({
     BASE_URL = '/',
     PORT = 3000,
 }: TEnv): TConfiguration => {
-    const src = path.resolve(process.cwd(), 'src')
-    const dist = path.resolve(process.cwd(), 'dist')
+    const dirname = process.cwd()
+    const src = path.resolve(dirname, 'src')
+    const dist = path.resolve(dirname, 'dist')
     const isDev = NODE_ENV === 'development'
 
     return {
@@ -103,7 +104,7 @@ export default ({
         plugins: [
             // Генерация HTML файла с подключением выходных файлов
             new HtmlWebpackPlugin({
-                template: path.resolve(process.cwd(), 'public', 'index.html'),
+                template: path.resolve(dirname, 'public', 'index.html'),
             }),
             // Определение глобальных переменных окружения для использования в коде
             new DefinePlugin({
@@ -136,7 +137,7 @@ export default ({
             // Для SPA: перенаправление всех запросов на index.html
             historyApiFallback: true,
             // Путь к статическим файлам
-            static: [path.resolve(process.cwd(), 'dist'), path.resolve(process.cwd(), 'public')],
+            static: [path.resolve(dirname, 'dist'), path.resolve(dirname, 'public')],
             // Открытие браузера при старте DevServer
             open: true,
             headers: {
