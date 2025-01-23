@@ -12,7 +12,22 @@ npm install --save-dev @uvarovag/webpack-config-ts-react webpack webpack-cli @uv
 
 ## Usage
 
-### Step 1: Create a `webpack.config.ts` file
+### Step 1: Create a project structure
+
+```
+├── public/
+│   └── index.html     // HTML template
+├── src/               // Folder with the application's source code
+│   └── index.tsx      // Entry point for the application
+├── webpack.config.ts  // Webpack configuration
+├── tsconfig.json      // TypeScript configuration
+├── global.d.ts        // Global TypeScript declaration file
+├── package.json       // Project description, dependencies, and scripts
+├── eslint.config.mjs  // (optional) ESLint configuration for code quality checks
+└── .prettierrc        // (optional) Prettier configuration for code formatting
+```
+
+### Step 2: Create a `webpack.config.ts` file
 
 ```ts
 import toCamelCase from '@uvarovag/to-camel-case'
@@ -44,7 +59,7 @@ export default (env: TEnv): TConfiguration =>
     })
 ```
 
-### Step 2: Add scripts to your `package.json`
+### Step 3: Add scripts to your `package.json`
 
 ```json
 "scripts": {
