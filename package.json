@@ -13,8 +13,9 @@
         "build:cjs": "tsc --project tsconfig.cjs.json",
         "build:esm": "tsc --project tsconfig.esm.json",
         "build": "npm run build:cjs && npm run build:esm",
-        "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}' && npm pkg fix",
-        "deploy": "npm run fix && npm run build && npm publish"
+        "fix": "prettier --write '**/*.{ts,tsx,js,json,css,html,md}'",
+        "deploy": "npm publish",
+        "prepare": "husky"
     },
     "keywords": [
         "webpack",
@@ -48,6 +49,7 @@
         "@types/webpack": "^5.28.5",
         "@types/webpack-dev-server": "^4.7.1",
         "@uvarovag/prettier-config": "^1.0.6",
+        "husky": "^9.1.7",
         "prettier": "^3.4.2",
         "typescript": "^5.7.3",
         "webpack": "^5.97.1",

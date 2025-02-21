@@ -64,7 +64,7 @@ export default (env: TEnv): TConfiguration =>
 ```json
 "scripts": {
     "start": "webpack serve --env NODE_ENV=development",
+    "build": "webpack --env NODE_ENV=production",
     "build:dev": "webpack --env NODE_ENV=development",
-    "build:prod": "webpack --env NODE_ENV=production",
 }
 ```
